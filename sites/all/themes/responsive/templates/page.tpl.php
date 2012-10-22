@@ -118,9 +118,9 @@
     <?php if (theme_get_setting('slideshow_display', 'responsive')): ?>
       <!-- Slides -->
       <?php 
-      $url1 = check_plain(theme_get_setting('slide1_url','responsive')); $cap1 = check_markup(theme_get_setting('slide1_desc','responsive'), 'full_html');
-      $url2 = check_plain(theme_get_setting('slide2_url','responsive')); $cap2 = check_markup(theme_get_setting('slide2_desc','responsive'), 'full_html');
-      $url3 = check_plain(theme_get_setting('slide3_url','responsive')); $cap3 = check_markup(theme_get_setting('slide3_desc','responsive'), 'full_html');
+      $url1 = check_plain(theme_get_setting('slide1_url','responsive')); $cap1 = check_plain(theme_get_setting('slide1_desc','responsive'));
+      $url2 = check_plain(theme_get_setting('slide2_url','responsive')); $cap2 = check_plain(theme_get_setting('slide2_desc','responsive'));
+      $url3 = check_plain(theme_get_setting('slide3_url','responsive')); $cap3 = check_plain(theme_get_setting('slide3_desc','responsive'));
       ?>
      <div class="flexslider">
       <ul class="slides">
