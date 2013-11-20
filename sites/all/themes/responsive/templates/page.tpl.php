@@ -90,7 +90,7 @@
       <?php if ($facebook_url): ?><li> <a href="<?php print $facebook_url; ?>" target="_blank"> <img src="<?php print $theme_path_social; ?>/images/facebook.png"> </a> </li> <?php endif; ?>
       <?php if ($googleplus_url): ?><li> <a href="<?php print $googleplus_url; ?>" target="_blank"> <img src="<?php print $theme_path_social; ?>/images/gplus.png"> </a> </li> <?php endif; ?>
       <?php if ($linkedin_url): ?><li> <a href="<?php print $linkedin_url; ?>" target="_blank"> <img src="<?php print $theme_path_social; ?>/images/in.png"> </a> </li> <?php endif; ?>
-      <li> <a href="<?php print $front_page; ?>aggregator/rss"> <img src="<?php print $theme_path_social; ?>/images/rss.png"> </a> </li>
+      <li> <a href="<?php print $front_page; ?>rss.xml"> <img src="<?php print $theme_path_social; ?>/images/rss.png"> </a> </li>
         </ul>
       </div>
       <?php endif; ?>
@@ -118,9 +118,9 @@
     <?php if (theme_get_setting('slideshow_display', 'responsive')): ?>
       <!-- Slides -->
       <?php 
-      $url1 = check_plain(theme_get_setting('slide1_url','responsive')); $cap1 = check_plain(theme_get_setting('slide1_desc','responsive'));
-      $url2 = check_plain(theme_get_setting('slide2_url','responsive')); $cap2 = check_plain(theme_get_setting('slide2_desc','responsive'));
-      $url3 = check_plain(theme_get_setting('slide3_url','responsive')); $cap3 = check_plain(theme_get_setting('slide3_desc','responsive'));
+      $url1 = check_plain(theme_get_setting('slide1_url','responsive')); $cap1 = check_markup(theme_get_setting('slide1_desc','responsive'), 'full_html');
+      $url2 = check_plain(theme_get_setting('slide2_url','responsive')); $cap2 = check_markup(theme_get_setting('slide2_desc','responsive'), 'full_html');
+      $url3 = check_plain(theme_get_setting('slide3_url','responsive')); $cap3 = check_markup(theme_get_setting('slide3_desc','responsive'), 'full_html');
       ?>
      <div class="flexslider">
       <ul class="slides">
@@ -209,3 +209,8 @@
     <?php endif; ?>
     </div>
 <?php endif; ?>
+  
+<div id="copyright" class="container">
+ <div class="credit"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <?php print $site_name; ?> <br/> <?php print t('Developed by'); ?> <a href="http://www.devsaran.com" target="_blank">Devsaran</a>.</div>
+  <div class="clear"></div>
+</div>

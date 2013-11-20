@@ -17,20 +17,8 @@
 /* #Site Styles
 ================================================== */
 
-h2 {
-  font-size: 18px;
-}
-
 /* #Page Styles
 ================================================== */
-.view-latest-news .views-row {
-  margin-bottom: 20px;
-}
-	.view-latest-news .views-field-title .field-content {
-	  font-weight: bold;
-	}
-
-
 
 /* #Media Queries
 ================================================== */

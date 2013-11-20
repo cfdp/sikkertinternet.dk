@@ -103,7 +103,7 @@ function prod_monitor_menu() {
     'page arguments' => array(4),
     'access callback' => 'user_access',
     'access arguments' => array('access production monitor'),
-    'type' => MENU_CALLBACK,
+    'type' => MENU_NORMAL_ITEM,
     'file' => 'includes/prod_monitor.admin.inc',
     'weight' => 10,
   );
@@ -227,10 +227,13 @@ function prod_monitor_load($id) {
  * Implementation of hook_load()
  */
 function prod_monitor_perf_load($id) {
+  $data = array();
+  $data['id'] = $id;
+
   // Get performance data.
-  $data = _prod_monitor_get_performance_data($id);
+  $data['data'] = _prod_monitor_get_performance_data($id);
   // Hide tab if no module data found.
-  if (empty($data)) {
+  if (empty($data['data'])) {
     return FALSE;
   }
   return $data;
@@ -278,23 +281,31 @@ function template_preprocess_prod_monitor_performance(&$vars) {
     foreach ($data_set as $time => $params) {
       // Store title for this modules graphs.
       $vars['graphs'][$module]['title'] = $params['title'];
-      // Count all rows.
-      $count = count($params['data']);
-      foreach ($params['data'] as $title => $row) {
-        // Rows without a specified unit.
-        if (!isset($row[1])) {
-          $row[1] = '';
+      if (is_array($params['data'])) {
+        // Count all rows.
+        $count = count($params['data']);
+        foreach ($params['data'] as $title => $row) {
+          // Rows without a specified unit.
+          if (!isset($row[1])) {
+            $row[1] = '';
+          }
+          if ($i < $count) {
+            // Setup the columns for the graph in such a way that they are
+            // organised by unit so we can draw one graph per unit.
+            $vars['graphs'][$module][$row[1]]['cols'][] = $title;
+            $i++;
+          }
+          // Cast empty strings to 0 and store the data per timestamp and unit so
+          // that we can draw one graph per unit.
+          $vars['graphs'][$module][$row[1]]['rows'][$time][] = (int) $row[0];
         }
-        if ($i < $count) {
-          // Setup the columns for the graph in such a way that they are
-          // organised by unit so we can draw one graph per unit.
-          $vars['graphs'][$module][$row[1]]['cols'][] = $title;
-          $i++;
-        }
-        // Cast empty strings to 0 and store the data per timestamp and unit so
-        // that we can draw one graph per unit.
-        $vars['graphs'][$module][$row[1]]['rows'][$time][] = (int) $row[0];
       }
+      else {
+        $vars['graphs'][$module]['message'] = $params['data'];
+      }
+    }
+    if (count($vars['graphs'][$module]) > 2) {
+      unset($vars['graphs'][$module]['message']);
     }
   }
 }
@@ -559,7 +570,7 @@ function _prod_monitor_get_site($id, $all = FALSE) {
   }
   else {
     $site = db_query("SELECT * FROM {prod_monitor_sites} WHERE id = :id", array(':id' => $id))->fetchAssoc();
-  } 
+  }
 
   if (!empty($site)) {
     $site['settings'] = unserialize($site['settings']);
