@@ -9,7 +9,7 @@
     //plugin's default options
     var settings = {
       switchWidth: 750,
-      topOptionText: 'Select menu item',
+      topOptionText: 'Vælg menupunkt',
       indentString: '&nbsp;&nbsp;&nbsp;'
     };
     
