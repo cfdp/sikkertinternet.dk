@@ -51,6 +51,7 @@ img {
 .logo-trinity {
   position: relative;
   height: 150px;
+  margin-bottom: 3em;
 }
 
 .medieraad-logo {
@@ -73,7 +74,7 @@ img {
 }
 
 .sid-logo {
-  margin-top: 100px;
+  /*margin-top: 50px;*/
 }
 
 /* #Media queries
