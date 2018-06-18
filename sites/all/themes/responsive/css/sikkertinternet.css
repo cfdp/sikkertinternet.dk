@@ -76,6 +76,15 @@ img {
 .sid-logo {
   /*margin-top: 50px;*/
 }
+/* Sidebar reports view */
+.sidebar h3 {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.sidebar .views-row {
+  margin-bottom: 5px;
+}
 
 /* #Media queries
 ================================================== */
