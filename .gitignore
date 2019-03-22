@@ -2,6 +2,7 @@
 sites/*/settings*.php
 
 .well-known/
+.DS_Store
 
 sites/all/themes/responsive/.sass-cache
 sites/all/themes/*/node_modules
