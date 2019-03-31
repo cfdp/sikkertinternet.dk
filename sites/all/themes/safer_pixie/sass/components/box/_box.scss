@@ -65,12 +65,18 @@
   // the "main-wrapper" is a _modifier_, creating a new variation of the standard
   // "box" component.
   &--main-wrapper {
-    border: none;
+    border: 0;
     background-color: color(body-bg);
     padding: 1em;
     margin-top: 2em;
   }
+
+  &--si-rss-item {
+    @include margin(0 0 .3 0);
+    @include padding(0 0 .3 0);
+  }
 }
+
 
 //
 // Drupal selectors.

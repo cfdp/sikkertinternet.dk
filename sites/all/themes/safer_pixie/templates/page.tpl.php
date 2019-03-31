@@ -30,6 +30,7 @@
         </div>
       <?php endif; ?>
 
+      <div class="header__rss-icon"><a href="<?php print $front_page; ?>aggregator/rss"> <img src="/sites/all/themes/safer_pixie/sass/components/images/ikon_rss.svg"> </a></div>
       <?php if ($secondary_menu): ?>
         <nav class="header__secondary-menu" role="navigation">
           <?php print theme('links__system_secondary_menu', array(
@@ -43,6 +44,14 @@
               'class' => array('visually-hidden'),
             ),
           )); ?>
+        </nav>
+      <?php endif; ?>
+      
+      <?php if ($main_menu): ?>
+        <nav class="main-menu" role="navigation">
+          <?php
+            $block = module_invoke('menu_block', 'block_view', '1');
+            print render($block['content']); ?>
         </nav>
       <?php endif; ?>
 
@@ -74,10 +83,12 @@
 
       <main class="<?php print $content_class; ?>" role="main">
         <?php print render($page['highlighted']); ?>
-        <?php print $breadcrumb; ?>
+        <?php if (!$is_front): ?>
+          <?php print $breadcrumb; ?>
+        <?php endif; ?>   
         <a href="#skip-link" class="visually-hidden visually-hidden--focusable" id="main-content">Back to top</a>
         <?php print render($title_prefix); ?>
-        <?php if ($title): ?>
+        <?php if ($title && !($is_front)): ?>
           <h1><?php print $title; ?></h1>
         <?php endif; ?>
         <?php print render($title_suffix); ?>
@@ -91,34 +102,7 @@
         <?php print $feed_icons; ?>
       </main>
 
-      <div class="layout-swap__top layout-3col__full">
-
-        <a href="#skip-link" class="visually-hidden visually-hidden--focusable" id="main-menu" tabindex="-1">Back to top</a>
-
-        <?php if ($main_menu): ?>
-          <nav class="main-menu" role="navigation">
-            <?php
-            // This code snippet is hard to modify. We recommend turning off the
-            // "Main menu" on your sub-theme's settings form, deleting this PHP
-            // code block, and, instead, using the "Menu block" module.
-            // @see https://drupal.org/project/menu_block
-            print theme('links__system_main_menu', array(
-              'links' => $main_menu,
-              'attributes' => array(
-                'class' => array('navbar', 'clearfix'),
-              ),
-              'heading' => array(
-                'text' => t('Main menu'),
-                'level' => 'h2',
-                'class' => array('visually-hidden'),
-              ),
-            )); ?>
-          </nav>
-        <?php endif; ?>
-
-        <?php print render($page['navigation']); ?>
-
-      </div>
+      <!-- delete the "layout-swap__top layout-3col__full" div -->
 
       <?php if ($sidebar_first): ?>
         <aside class="<?php print $sidebar_first_class; ?>" role="complementary">

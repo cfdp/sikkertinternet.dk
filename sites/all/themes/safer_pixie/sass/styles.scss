@@ -52,6 +52,7 @@
 @import 'components/comment/comment';
 @import 'components/divider/divider';
 @import 'components/header/header';
+@import 'components/hero/hero';
 @import 'components/hidden/hidden';
 @import 'components/highlight-mark/highlight-mark';
 @import 'components/inline-links/inline-links';
@@ -98,3 +99,89 @@
 @import 'forms/progress-throbber/progress-throbber';
 @import 'forms/resizable-textarea/resizable-textarea';
 @import 'forms/table-drag/table-drag';
+
+.views-field-timestamp {
+  color: $turquoise;
+}
+
+.view-Seneste-aktiviteter {
+  .view-content,
+  > .item-list {
+    padding-left: .5em;
+  }
+}
+
+// Dates
+.si-date {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.75;
+  letter-spacing: 0.8px;
+  color: color(dusk-blue);
+}
+
+.safer-internet-day-logo {
+  display: block;
+  width: 210px;
+  height: 118px;
+  background-size: 210px 118px;
+  background-image: image-url('images/grafik_SID2020_Save_the_date_01.png');
+  background-position: center;
+  margin: 0 auto;
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    background-image: image-url('images/grafik_SID2020_Save_the_date_01@2x.png');
+  }
+}
+
+.footer {
+  background-color: color(white);
+  padding: 1em;
+
+  p {
+    margin: 0;
+  }
+
+  .si-footer-logos {
+    padding: 2em 0 1em 0;
+    a {
+      display: inline-block;
+      background-position-y: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__logo-mbu {
+    height: 38px;
+    width: 82px;
+    background-size: 82px 27px;
+    background-image: image-url('images/logo_mbu.svg');
+    margin-right: 50px;
+  }
+
+  &__logo-redbarnet {
+    width: 135px;
+    height: 38px;
+    background-size: 135px 38px;
+    background-image: image-url('images/logo_redbarnet.svg');
+    margin-right: 50px;
+  }
+
+  &__logo-cfdp {
+    width: 116px;
+    height: 38px;
+    background-size: 116px 38px;
+    background-image: image-url('images/logo_cfdp.svg');
+    margin-right: 50px;
+  }
+
+  &__logo-eu {
+    width: 209px;
+    height: 38px;
+    background-size: 209px 24px;
+    background-image: image-url('images/logo_da_horizontal_cef_logo.svg');
+    float: right;
+  }
+}

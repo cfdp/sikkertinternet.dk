@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700|Work+Sans:400,500,600,700");
 * {
   box-sizing: border-box;
 }
@@ -5,7 +6,7 @@
 html {
   font-size: 100%;
   line-height: 1.5em;
-  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   min-height: 100%;
@@ -61,16 +62,44 @@ template,
 }
 
 a {
-  color: #0072b9;
+  color: #00c3a6;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+}
+
+.si-link {
+  margin: 0.45rem 0;
+}
+
+.si-link a {
+  color: #000;
+  font-size: 20px;
+}
+
+.si-rss-link a {
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.31;
+  letter-spacing: -0.3px;
+}
+
+.si-rss-link a::after {
+  content: ".";
+}
+
+.si-latest-report a {
+  color: #214b81;
 }
 
 :visited {
-  color: #003353;
+  color: #005d4f;
 }
 
 a:active {
-  color: #c00;
+  color: #005d4f;
 }
 
 a:active:not(.button) {
@@ -87,16 +116,31 @@ a:hover {
   :visited {
     text-decoration: underline;
   }
-  a[href]:after {
+  a[href]::after {
     content: " (" attr(href) ")";
     font-weight: normal;
     font-size: 16px;
     text-decoration: none;
   }
-  a[href^='javascript:']:after,
-  a[href^='#']:after {
+  a[href^='javascript:']::after,
+  a[href^='#']::after {
     content: '';
   }
+}
+
+.si-header,
+h1,
+.header__site-name,
+h1.si-link-heading,
+.si-link-heading.header__site-name,
+.layout-3col__right-sidebar .block__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 31px;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: #442d41;
 }
 
 h1,
@@ -105,6 +149,58 @@ h1,
   line-height: 3rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+h1.si-link-heading,
+.si-link-heading.header__site-name {
+  display: inline-block;
+  margin: 0;
+  padding: 2px 0 0 13px;
+  vertical-align: top;
+}
+
+.not-front .layout-3col__full h1,
+.not-front .layout-3col__left-content h1 {
+  margin-top: 10px;
+  font-size: 31px;
+  font-weight: 400;
+  line-height: .77;
+  letter-spacing: -.4px;
+  padding-bottom: 15px;
+}
+
+.layout-3col__right-sidebar .block__title {
+  margin-bottom: 18px;
+  margin-top: 32px;
+}
+
+.not-front .layout-3col__right-sidebar .block__title {
+  margin-bottom: 40px;
+  margin-top: 35px;
+  padding-bottom: 15px;
+}
+
+.si-link-icon {
+  display: inline-block;
+  text-indent: -9999px;
+  width: 50px;
+  height: 50px;
+  background: url(../sass/components/images/ikon_danske_rapporter.svg);
+  background-size: 50px 50px;
+}
+
+.si-link-block-temaartikler .si-link-icon {
+  background: url(../sass/components/images/ikon_temaartikler.svg);
+}
+
+.si-link-block-udenlandske-rapporter .si-link-icon {
+  background: url(../sass/components/images/ikon_udenlandske_rapporter.svg);
+}
+
+.si-link-block-skoler .si-link-icon {
+  background: url(../sass/components/images/ikon_skoler.svg);
 }
 
 h2 {
@@ -112,6 +208,10 @@ h2 {
   line-height: 2.25rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  font-weight: 400;
+  line-height: .77;
+  letter-spacing: -.4px;
+  color: #442d41;
 }
 
 h3 {
@@ -119,6 +219,15 @@ h3 {
   line-height: 2.25rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+h3.si-rss-header {
+  margin: 0.75rem 0 0.75rem 0;
+  background-color: #442d41;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0 .5em;
 }
 
 h4 {
@@ -211,6 +320,31 @@ hr {
 
 .divider > :first-child, hr > :first-child {
   margin-top: 1.5rem;
+}
+
+.divider--si-green {
+  border-bottom: 1px solid #00c3a6;
+}
+
+.divider--si-green.views-row-last {
+  border: 0;
+}
+
+.divider--si-dark,
+.view-Seneste-aktiviteter .view-header,
+.not-front .layout-3col__full h1,
+.not-front .layout-3col__left-content h1,
+.not-front .layout-3col__right-sidebar h2.block__title {
+  border-bottom: 1px solid #442d41;
+}
+
+.divider--si-grey {
+  border-top: 1px solid #d8d8d8;
+}
+
+.divider--si-link-block {
+  margin: 1.2rem 0;
+  border-bottom: 3px solid #442d41;
 }
 
 blockquote {
@@ -689,7 +823,7 @@ th {
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
-  max-width: 1165px;
+  max-width: 965px;
 }
 
 @media (min-width: 777px) {
@@ -711,12 +845,6 @@ th {
 
 .layout-swap {
   position: relative;
-}
-
-@media (min-width: 555px) {
-  .layout-swap {
-    padding-top: 48px;
-  }
 }
 
 @media (min-width: 555px) {
@@ -743,14 +871,19 @@ th {
 }
 
 .box--highlight {
-  border-color: #0072b9;
+  border-color: #00c3a6;
 }
 
 .box--main-wrapper {
-  border: none;
+  border: 0;
   background-color: #fff;
   padding: 1em;
   margin-top: 2em;
+}
+
+.box--si-rss-item {
+  margin: 0 0 0.45rem 0;
+  padding: 0 0 0.45rem 0;
 }
 
 .clearfix:before,
@@ -798,6 +931,10 @@ th {
   margin-right: 32px;
 }
 
+.header {
+  margin-bottom: .8em;
+}
+
 .header__logo {
   float: left;
   margin: 0 10px 0 0;
@@ -815,6 +952,7 @@ th {
 
 .header__name-and-slogan {
   float: left;
+  margin-bottom: 1em;
 }
 
 .header__site-name {
@@ -822,16 +960,26 @@ th {
 }
 
 .header__site-link:link, .header__site-link:visited {
-  color: #000;
+  color: #214b81;
   text-decoration: none;
+  font-weight: 700;
 }
 
 .header__site-link:hover, .header__site-link:focus {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .header__site-slogan {
   margin: 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #214b81;
+  font-weight: 600;
+}
+
+.header__rss-icon {
+  text-align: right;
+  margin-bottom: 23px;
 }
 
 .header__secondary-menu {
@@ -844,6 +992,28 @@ th {
 
 .header__region {
   clear: both;
+}
+
+.hero {
+  border-top: 3px solid #dab2bf;
+  border-bottom: 3px solid #dab2bf;
+  margin: 1em auto;
+}
+
+.hero__text {
+  color: #1f4b8a;
+  font-size: 26px;
+  letter-spacing: -.7px;
+  text-align: center;
+  line-height: normal;
+  max-width: 769px;
+  margin: 2em auto;
+}
+
+.hero a {
+  color: #1f4b8a;
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 .hidden,
@@ -1091,6 +1261,7 @@ span.field-label {
 }
 
 .breadcrumb__item {
+  font-size: 12px;
   display: inline;
   list-style-type: none;
   margin: 0;
@@ -1155,7 +1326,9 @@ span.field-label {
 
 .navbar,
 .main-navigation .links,
-.main-navigation .menu {
+.main-navigation .menu,
+.menu-name-main-menu .links,
+.menu-name-main-menu .menu {
   margin: 0;
   padding: 0;
   text-align: left;
@@ -1166,25 +1339,44 @@ span.field-label {
 .main-navigation [dir="rtl"] .links,
 [dir="rtl"]
 .main-navigation .menu,
-.main-navigation [dir="rtl"] .menu {
+.main-navigation [dir="rtl"] .menu,
+[dir="rtl"] .menu-name-main-menu .links,
+.menu-name-main-menu [dir="rtl"] .links,
+[dir="rtl"]
+.menu-name-main-menu .menu,
+.menu-name-main-menu [dir="rtl"] .menu {
   text-align: right;
 }
 
 .navbar__item,
 .navbar li, .main-navigation .links li,
-.main-navigation .menu li {
+.main-navigation .menu li, .menu-name-main-menu .links li,
+.menu-name-main-menu .menu li {
   float: left;
   padding: 0 10px 0 0;
   list-style-type: none;
   list-style-image: none;
 }
 
+.navbar__item:last-child,
+.navbar li:last-child, .main-navigation .links li:last-child,
+.main-navigation .menu li:last-child, .menu-name-main-menu .links li:last-child,
+.menu-name-main-menu .menu li:last-child {
+  padding: 0;
+}
+
 [dir="rtl"] .navbar__item, [dir="rtl"]
 .navbar li, [dir="rtl"] .main-navigation .links li, .main-navigation [dir="rtl"] .links li, [dir="rtl"]
 .main-navigation .menu li,
-.main-navigation [dir="rtl"] .menu li {
+.main-navigation [dir="rtl"] .menu li, [dir="rtl"] .menu-name-main-menu .links li, .menu-name-main-menu [dir="rtl"] .links li, [dir="rtl"]
+.menu-name-main-menu .menu li,
+.menu-name-main-menu [dir="rtl"] .menu li {
   float: right;
   padding: 0 0 0 10px;
+}
+
+.menu-name-main-menu {
+  float: right;
 }
 
 .pager {
@@ -1217,6 +1409,25 @@ span.field-label {
 .pager__current-item,
 .pager-current {
   font-weight: bold;
+}
+
+.pager--si-link-list-pager,
+.view-Seneste-aktiviteter .pager {
+  list-style: none;
+  text-align: left;
+  margin: .2em 0;
+}
+
+.pager .pager-show-more-next a {
+  display: inline-block;
+  text-indent: -9999px;
+  height: 22px;
+  background: url(../sass/components/images/ikon_pil_ned.svg);
+  /* Arrow by Ghiyats Mujtaba from the Noun Project */
+  background-size: 22px 13px;
+  background-repeat: no-repeat;
+  background-position: 0 5px;
+  padding-left: 20px;
 }
 
 .skip-link {
@@ -1824,6 +2035,93 @@ tr.drag-previous {
 .table-drag__tree-child-horizontal,
 .tree-child-horizontal {
   background-position: -11px center;
+}
+
+.views-field-timestamp {
+  color: #00c3a6;
+}
+
+.view-Seneste-aktiviteter .view-content,
+.view-Seneste-aktiviteter > .item-list {
+  padding-left: .5em;
+}
+
+.si-date {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.75;
+  letter-spacing: 0.8px;
+  color: #214b81;
+}
+
+.safer-internet-day-logo {
+  display: block;
+  width: 210px;
+  height: 118px;
+  background-size: 210px 118px;
+  background-image: url(../sass/components/images/grafik_SID2020_Save_the_date_01.png);
+  background-position: center;
+  margin: 0 auto;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .safer-internet-day-logo {
+    background-image: url(../sass/components/images/grafik_SID2020_Save_the_date_01@2x.png);
+  }
+}
+
+.footer {
+  background-color: #fff;
+  padding: 1em;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer .si-footer-logos {
+  padding: 2em 0 1em 0;
+}
+
+.footer .si-footer-logos a {
+  display: inline-block;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
+.footer__logo-mbu {
+  height: 38px;
+  width: 82px;
+  background-size: 82px 27px;
+  background-image: url(../sass/components/images/logo_mbu.svg);
+  margin-right: 50px;
+}
+
+.footer__logo-redbarnet {
+  width: 135px;
+  height: 38px;
+  background-size: 135px 38px;
+  background-image: url(../sass/components/images/logo_redbarnet.svg);
+  margin-right: 50px;
+}
+
+.footer__logo-cfdp {
+  width: 116px;
+  height: 38px;
+  background-size: 116px 38px;
+  background-image: url(../sass/components/images/logo_cfdp.svg);
+  margin-right: 50px;
+}
+
+.footer__logo-eu {
+  width: 209px;
+  height: 38px;
+  background-size: 209px 24px;
+  background-image: url(../sass/components/images/logo_da_horizontal_cef_logo.svg);
+  float: right;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -20,8 +20,37 @@ a,
   color: color(link);
   // Remove gaps in links underline in iOS 8+ and Safari 8+.
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
 }
 
+.si-link {
+  @include margin(.3 0);
+  a {
+    color: color(black);
+    font-size: 20px;
+  }
+}
+
+.si-rss-link {
+  a {
+    color: color(black);
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.31;
+    letter-spacing: -0.3px;
+  }
+  a::after {
+    content: ".";
+  }
+}
+
+.si-latest-report {
+  a {
+    color: color(dusk-blue);
+  }
+}
 // Any element can receive focus, but only links can be visited, so we can
 // safely lower this selector's specificity. This also ensures visited links
 // with additional styles won't have their styles overridden.
@@ -58,7 +87,7 @@ a:hover {
   }
 
   // Add visible URL after links.
-  a[href]:after {
+  a[href]::after {
     content: ' (' attr(href) ')';
     font-weight: normal;
     font-size: $base-font-size;
@@ -66,8 +95,8 @@ a:hover {
   }
 
   // Only display useful links.
-  a[href^='javascript:']:after,
-  a[href^='#']:after {
+  a[href^='javascript:']::after,
+  a[href^='#']::after {
     content: '';
   }
 }

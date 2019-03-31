@@ -1,4 +1,4 @@
-// Dependencies.
+  // Dependencies.
 @import 'base/headings/headings';
 @import 'components/clearfix/clearfix';
 
@@ -11,6 +11,7 @@
 .header,
 %header {
   @extend %clearfix;
+  margin-bottom: .8em;
 
   // Wrapping link for logo.
   &__logo {
@@ -32,6 +33,7 @@
   // Wrapper for website name and slogan.
   &__name-and-slogan {
     float: left;
+    margin-bottom: 1em;
   }
 
   // The name of the website.
@@ -44,19 +46,30 @@
   &__site-link {
     &:link,
     &:visited {
-      color: color(text);
+      color: color(dusk-blue);
       text-decoration: none;
+      font-weight: 700;
     }
 
     &:hover,
     &:focus {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 
   // The slogan (or tagline) of a website.
   &__site-slogan {
     margin: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: color(dusk-blue);
+    font-weight: 600;
+  }
+
+  // The RSS icon
+  &__rss-icon {
+    text-align: right;
+    margin-bottom: 23px;
   }
 
   // The secondary menu (login, etc.)

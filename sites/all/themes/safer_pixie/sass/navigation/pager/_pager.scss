@@ -30,6 +30,25 @@
     @extend %pager__item;
     font-weight: bold;
   }
+
+  &--si-link-list-pager {
+    list-style: none;
+    text-align: left;
+    margin: .2em 0;
+  }
+
+  .pager-show-more-next a {
+    display: inline-block;
+    text-indent: -9999px;
+    //width: 15px;
+    height: 22px;
+    background: image-url('images/ikon_pil_ned.svg');
+    /* Arrow by Ghiyats Mujtaba from the Noun Project */
+    background-size: 22px 13px;
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+    padding-left: 20px;
+  }
 }
 
 //
@@ -54,4 +73,8 @@
 
 .pager-current {
   @extend %pager__current-item;
+}
+
+.view-Seneste-aktiviteter .pager {
+  @extend %pager--si-link-list-pager;
 }

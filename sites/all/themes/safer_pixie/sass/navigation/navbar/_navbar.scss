@@ -26,6 +26,10 @@
     list-style-type: none;
     list-style-image: none;
 
+    &:last-child {
+      padding: 0;
+    }
+
     @include rtl() {
       float: right;
       padding: 0 0 0 10px;
@@ -45,6 +49,15 @@
   }
 
   // Main menu and secondary menu links and menu block links.
+  .links,
+  .menu {
+    @extend %navbar;
+  }
+}
+
+.menu-name-main-menu {
+  float: right;
+
   .links,
   .menu {
     @extend %navbar;

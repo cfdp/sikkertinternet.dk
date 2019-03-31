@@ -33,6 +33,8 @@ $support-for: (
 //
 // Style guide: sass.variables.typey
 
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700|Work+Sans:400,500,600,700');
+
 // The font size set on the root html element.
 $base-font-size:    16px;
 
@@ -76,6 +78,10 @@ $tahoma:          Tahoma, Verdana, 'DejaVu Sans', sans-serif;
 $helvetica:       Helvetica, Arial, 'Nimbus Sans L', sans-serif;
 $arial:           Arial, Helvetica, 'Nimbus Sans L', sans-serif;
 $impact:          Impact, 'Arial Narrow', Helvetica, sans-serif;
+$oswald:          'Oswald', sans-serif;
+$work-sans:       'Work Sans', sans-serif;
+
+
 
 // Monospace font stacks.
 // For an explanation of why "sans-serif" is at the end of this list, see
@@ -86,7 +92,7 @@ $menlo:           Menlo, 'DejaVu Sans Mono', 'Ubuntu Mono', Courier, 'Courier Ne
 // typeface() mixin.
 $typefaces: (
   body: (
-    font-family: $verdana,
+    font-family: $work-sans,
   ),
   monospace: (
     font-family: $menlo,

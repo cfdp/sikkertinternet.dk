@@ -61,25 +61,6 @@ function safer_pixie_preprocess_page(&$variables, $hook) {
 // */
 
 /**
- * Override or insert variables into the region templates.
- *
- * @param array $variables
- *   Variables to pass to the theme template.
- * @param string $hook
- *   The name of the template being rendered ("region" in this case.)
- */
-/* -- Delete this line if you want to use this function
-function safer_pixie_preprocess_region(&$variables, $hook) {
-  // Don't use Zen's region--no-wrapper.tpl.php template for sidebars.
-  if (strpos($variables['region'], 'sidebar_') === 0) {
-    $variables['theme_hook_suggestions'] = array_diff(
-      $variables['theme_hook_suggestions'], array('region__no_wrapper')
-    );
-  }
-}
-// */
-
-/**
  * Override or insert variables into the block templates.
  *
  * @param array $variables

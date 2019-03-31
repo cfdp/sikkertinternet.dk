@@ -15,11 +15,14 @@ $eggshell-blue: #c9fff3;
 $turquoise: #00c3a6;
 $purple-brown: #442d41;
 $dusk-blue: #214b81;
+$dusk-blue-two: #1f4b8a;
+$grey-light-si: #d8d8d8;
 $light-blue-grey: #b2d9dd;
 $teal-blue: #0097ad;
 $duck-egg-blue: #cbe9e4;
 $earth: #923b3b;
 $blueberry: #6735a0;
+$pinkie: #dab2bf;
 
 // Define the default color scheme's color names.
 $chroma: define-default-color-scheme('branding', 'The site\'s main colors. Can be used to define colors in other color schemes.');
@@ -30,11 +33,15 @@ $chroma: add-colors((
   'grey':                 ('black' lighten 60%), // #999
   grey-light:             ('black' lighten 80%), // #ccc
   grey-extra-light:       ('black' lighten 93.33%), // #eee
+  grey-light-si:          $grey-light-si,
   white:                  #fff,
-
+  dusk-blue:              $dusk-blue,
+  dusk-blue-two:          $dusk-blue-two,
   blue:                   #0072b9,
   red:                    #c00,
   yellow:                 #fd0,
+  purple-brown:           $purple-brown,
+  pinkie:                 $pinkie
 ));
 
 // Define color names for functional uses.
@@ -44,9 +51,9 @@ $chroma: add-colors('functional', (
   text:                   'black',
   text-bg:                $light-blue-grey,
 
-  link:                   'blue',
-  link-visited:           ('blue' darken 20%),
-  link-active:            'red',
+  link:                   $turquoise,
+  link-visited:           ($turquoise darken 20%),
+  link-active:            ($turquoise darken 20%),
 
   border:                 'grey-light',
 
@@ -63,6 +70,7 @@ $chroma: add-colors('functional', (
   fieldset-summary:       'grey',
   form-error:             'red',
 
+  hero:                   'dusk-blue-two',
   mark-highlight:         'red',
   mark-bg:                'yellow',
 

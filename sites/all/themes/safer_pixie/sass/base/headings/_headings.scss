@@ -10,6 +10,17 @@
 
 // Address variable `h1` font-size and margin within `section` and `article`
 // contexts in Firefox 4+, Safari, and Chrome.
+
+.si-header,
+%si-header {
+  font-family: $oswald;
+  font-size: 31px;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: color(purple-brown);
+}
 h1,
 %h1 {
   // Set the font-size and line-height while keeping a proper vertical rhythm.
@@ -18,6 +29,67 @@ h1,
   // Set 1 unit of vertical rhythm on the top and bottom margins.
   @include margin-top(1, xxl);
   @include margin-bottom(1, xxl);
+
+  @extend %si-header;
+  line-height: normal;
+  letter-spacing: normal;
+
+  &.si-link-heading {
+    display: inline-block;
+    @extend %si-header;
+    margin: 0;
+    padding: 2px 0 0 13px;
+    vertical-align: top;
+  }
+}
+
+.not-front .layout-3col__full h1,
+.not-front .layout-3col__left-content h1 {
+  margin-top: 10px;
+  font-size: 31px;
+  font-weight: 400;
+  line-height: .77;
+  letter-spacing: -.4px;
+  padding-bottom: 15px;
+}
+
+.layout-3col__right-sidebar .block__title {
+  @extend %si-header;
+  margin-bottom: 18px;
+  margin-top: 32px;
+}
+
+.not-front .layout-3col__right-sidebar .block__title {
+  margin-bottom: 40px;
+  margin-top: 35px;
+  padding-bottom: 15px;
+}
+
+.si-link-icon {
+  display: inline-block;
+  text-indent: -9999px;
+  width: 50px;
+  height: 50px;
+  background: image-url('images/ikon_danske_rapporter.svg');
+  background-size: 50px 50px;
+}
+
+.si-link-block-temaartikler {
+  .si-link-icon {
+    background: image-url('images/ikon_temaartikler.svg');
+  }
+}
+
+.si-link-block-udenlandske-rapporter {
+  .si-link-icon {
+    background: image-url('images/ikon_udenlandske_rapporter.svg');
+  }
+}
+
+.si-link-block-skoler {
+  .si-link-icon {
+    background: image-url('images/ikon_skoler.svg');
+  }
 }
 
 h2,
@@ -25,6 +97,10 @@ h2,
   @include type-layout(xl, 1.5);
   @include margin-top(1, xl);
   @include margin-bottom(1, xl);
+  font-weight: 400;
+  line-height: .77;
+  letter-spacing: -.4px;
+  color: color(purple-brown);
 }
 
 h3,
@@ -32,6 +108,16 @@ h3,
   @include type-layout(l, 1.5);
   @include margin-top(1, l);
   @include margin-bottom(1, l);
+
+  &.si-rss-header {
+    @include margin(.5 0 .5 0);
+    background-color: color(purple-brown);
+    color: color(white);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0 .5em;
+  }
+
 }
 
 h4,
