@@ -230,6 +230,10 @@ h3.si-rss-header {
   padding: 0 .5em;
 }
 
+h3.si-search-result {
+  font-weight: 400;
+}
+
 h4 {
   font-size: 1rem;
   line-height: 1.5rem;
