@@ -1,0 +1,40 @@
+// Hero
+//
+// A hero type text style for enhancing text snippets
+//
+// Markup: hero.twig
+//
+// Style guide: components.hero
+
+.hero,
+%hero {
+  border-top: 3px solid color(pinkie);
+  border-bottom: 3px solid color(pinkie);
+  margin: 1em auto;
+
+  &__text {
+    color: color(dusk-blue-two);
+    font-size: 26px;
+    letter-spacing: -.7px;
+    text-align: center;
+    line-height: normal;
+    max-width: 769px;
+    margin: 2em auto;
+  }
+
+  a {
+    color: color(dusk-blue-two);
+    text-decoration: underline;
+    font-weight: 500;
+  }
+}
+
+
+//
+// Drupal selectors. (In case a module doesn't use theme_mark().)
+//
+
+//.new,
+//.update {
+//  @extend %highlight-mark;
+//}
