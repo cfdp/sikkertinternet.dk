@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * @file
+ * Code for the Safer Internet content types feature.
+ */
+
+include_once 'safer_internet_content_types.features.inc';
