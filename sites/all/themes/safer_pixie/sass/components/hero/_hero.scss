@@ -19,13 +19,28 @@
     text-align: center;
     line-height: normal;
     max-width: 769px;
-    margin: 2em auto;
+    margin: 2rem auto 1rem auto;
+
+    a {
+      color: color(dusk-blue-two);
+      text-decoration: underline;
+      font-weight: 500;
+    }
   }
 
-  a {
+  &__read-more {
     color: color(dusk-blue-two);
-    text-decoration: underline;
-    font-weight: 500;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.31;
+    letter-spacing: 1.1px;
+    padding: .8rem 0 1.2rem 0;
   }
 }
 
