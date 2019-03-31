@@ -1011,13 +1011,28 @@ th {
   text-align: center;
   line-height: normal;
   max-width: 769px;
-  margin: 2em auto;
+  margin: 2rem auto 1rem auto;
 }
 
-.hero a {
+.hero__text a {
   color: #1f4b8a;
   text-decoration: underline;
   font-weight: 500;
+}
+
+.hero__read-more {
+  color: #1f4b8a;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.31;
+  letter-spacing: 1.1px;
+  padding: .8rem 0 1.2rem 0;
 }
 
 .hidden,
@@ -1357,7 +1372,7 @@ span.field-label {
 .main-navigation .menu li, .menu-name-main-menu .links li,
 .menu-name-main-menu .menu li {
   float: left;
-  padding: 0 10px 0 0;
+  padding: 0 38px 0 0;
   list-style-type: none;
   list-style-image: none;
 }
