@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * @file
+ * Code for the Safer Internet blocks feature.
+ */
+
+include_once 'safer_internet_blocks.features.inc';
