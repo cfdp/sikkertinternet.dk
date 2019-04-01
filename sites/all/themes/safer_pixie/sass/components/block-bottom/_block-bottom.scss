@@ -1,0 +1,59 @@
+// Block bottom
+//
+// A block style for the block sitting at the bottom of the sidebar.
+//
+
+
+// Markup: block-bottom.twig
+//
+// Style guide: components.block-bottom
+
+.block-bottom,
+%block-bottom {
+  @include margin-bottom(1);
+
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: .2rem;
+  }
+
+  &__subtitle {
+    color: color(purple-brown);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  p {
+    font-size: 12px;
+    letter-spacing: -0.2px;
+    line-height: normal;
+    margin: .5rem 0 2rem 0;
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-1 {
+    height: 50px;
+    width: 104px;
+    display: inline-block;
+    background-size: 104px 50px;
+    background-image: image-url('images/logo_insafe.png');
+    margin-right: 15px;
+  } 
+
+  &__logo-2 {
+    height: 30px;
+    width: 104px;
+    display: inline-block;
+    background-size: 104px 30px;
+    background-image: image-url('images/logo_inhope.png');
+  }
+
+}

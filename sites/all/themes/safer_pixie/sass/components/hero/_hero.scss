@@ -13,8 +13,11 @@
   margin: 1em auto;
 
   &__text {
+    @include respond-to(m) {
+      font-size: 26px;
+    }
     color: color(dusk-blue-two);
-    font-size: 26px;
+    font-size: 20px;
     letter-spacing: -.7px;
     text-align: center;
     line-height: normal;

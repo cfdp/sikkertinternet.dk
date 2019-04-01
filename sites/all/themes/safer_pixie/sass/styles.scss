@@ -48,6 +48,7 @@
 // Style guide: components
 
 @import 'components/box/box';
+@import 'components/block-bottom/block-bottom';
 @import 'components/clearfix/clearfix';
 @import 'components/comment/comment';
 @import 'components/divider/divider';
@@ -183,5 +184,11 @@
     background-size: 209px 24px;
     background-image: image-url('images/logo_da_horizontal_cef_logo.svg');
     float: right;
+  }
+}
+@include respond-to(xl){
+  #block-block-9 {
+    position: absolute;
+    bottom: 0;
   }
 }

@@ -60,10 +60,13 @@
   // The slogan (or tagline) of a website.
   &__site-slogan {
     margin: 0;
-    font-size: 20px;
+    font-size: 17px;
     text-transform: uppercase;
     color: color(dusk-blue);
     font-weight: 600;
+    @include respond-to(xs) {
+      font-size: 20px;
+    }
   }
 
   // The RSS icon
