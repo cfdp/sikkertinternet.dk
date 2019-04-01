@@ -166,9 +166,16 @@ h1.si-link-heading,
   margin-top: 10px;
   font-size: 31px;
   font-weight: 400;
-  line-height: .77;
+  line-height: normal;
   letter-spacing: -.4px;
   padding-bottom: 15px;
+}
+
+@media (min-width: 444px) {
+  .not-front .layout-3col__full h1,
+  .not-front .layout-3col__left-content h1 {
+    line-height: .77;
+  }
 }
 
 .layout-3col__right-sidebar .block__title {
@@ -890,6 +897,53 @@ th {
   padding: 0 0 0.45rem 0;
 }
 
+.block-bottom {
+  margin-bottom: 1.5rem;
+}
+
+.block-bottom__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: .2rem;
+}
+
+.block-bottom__subtitle {
+  color: #442d41;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.block-bottom p {
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  line-height: normal;
+  margin: .5rem 0 2rem 0;
+}
+
+.block-bottom__logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.block-bottom__logo-1 {
+  height: 50px;
+  width: 104px;
+  display: inline-block;
+  background-size: 104px 50px;
+  background-image: url(../sass/components/images/logo_insafe.png);
+  margin-right: 15px;
+}
+
+.block-bottom__logo-2 {
+  height: 30px;
+  width: 104px;
+  display: inline-block;
+  background-size: 104px 30px;
+  background-image: url(../sass/components/images/logo_inhope.png);
+}
+
 .clearfix:before,
 .header:before,
 .tabs:before {
@@ -975,10 +1029,16 @@ th {
 
 .header__site-slogan {
   margin: 0;
-  font-size: 20px;
+  font-size: 17px;
   text-transform: uppercase;
   color: #214b81;
   font-weight: 600;
+}
+
+@media (min-width: 555px) {
+  .header__site-slogan {
+    font-size: 20px;
+  }
 }
 
 .header__rss-icon {
@@ -1006,12 +1066,18 @@ th {
 
 .hero__text {
   color: #1f4b8a;
-  font-size: 26px;
+  font-size: 20px;
   letter-spacing: -.7px;
   text-align: center;
   line-height: normal;
   max-width: 769px;
   margin: 2rem auto 1rem auto;
+}
+
+@media (min-width: 777px) {
+  .hero__text {
+    font-size: 26px;
+  }
 }
 
 .hero__text a {
@@ -1345,9 +1411,7 @@ span.field-label {
 
 .navbar,
 .main-navigation .links,
-.main-navigation .menu,
-.menu-name-main-menu .links,
-.menu-name-main-menu .menu {
+.main-navigation .menu {
   margin: 0;
   padding: 0;
   text-align: left;
@@ -1358,19 +1422,13 @@ span.field-label {
 .main-navigation [dir="rtl"] .links,
 [dir="rtl"]
 .main-navigation .menu,
-.main-navigation [dir="rtl"] .menu,
-[dir="rtl"] .menu-name-main-menu .links,
-.menu-name-main-menu [dir="rtl"] .links,
-[dir="rtl"]
-.menu-name-main-menu .menu,
-.menu-name-main-menu [dir="rtl"] .menu {
+.main-navigation [dir="rtl"] .menu {
   text-align: right;
 }
 
 .navbar__item,
 .navbar li, .main-navigation .links li,
-.main-navigation .menu li, .menu-name-main-menu .links li,
-.menu-name-main-menu .menu li {
+.main-navigation .menu li {
   float: left;
   padding: 0 38px 0 0;
   list-style-type: none;
@@ -1379,23 +1437,44 @@ span.field-label {
 
 .navbar__item:last-child,
 .navbar li:last-child, .main-navigation .links li:last-child,
-.main-navigation .menu li:last-child, .menu-name-main-menu .links li:last-child,
-.menu-name-main-menu .menu li:last-child {
+.main-navigation .menu li:last-child {
   padding: 0;
 }
 
 [dir="rtl"] .navbar__item, [dir="rtl"]
 .navbar li, [dir="rtl"] .main-navigation .links li, .main-navigation [dir="rtl"] .links li, [dir="rtl"]
 .main-navigation .menu li,
-.main-navigation [dir="rtl"] .menu li, [dir="rtl"] .menu-name-main-menu .links li, .menu-name-main-menu [dir="rtl"] .links li, [dir="rtl"]
-.menu-name-main-menu .menu li,
-.menu-name-main-menu [dir="rtl"] .menu li {
+.main-navigation [dir="rtl"] .menu li {
   float: right;
   padding: 0 0 0 10px;
 }
 
 .menu-name-main-menu {
-  float: right;
+  clear: both;
+}
+
+@media (min-width: 777px) {
+  .menu-name-main-menu {
+    clear: none;
+  }
+  .menu-name-main-menu .links,
+  .menu-name-main-menu .menu {
+    float: right;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+  .menu-name-main-menu .links li,
+  .menu-name-main-menu .menu li {
+    float: left;
+    padding: 0 38px 0 0;
+    list-style-type: none;
+    list-style-image: none;
+  }
+  .menu-name-main-menu .links li:last-child,
+  .menu-name-main-menu .menu li:last-child {
+    padding: 0;
+  }
 }
 
 .pager {
@@ -2141,6 +2220,13 @@ tr.drag-previous {
   background-size: 209px 24px;
   background-image: url(../sass/components/images/logo_da_horizontal_cef_logo.svg);
   float: right;
+}
+
+@media (min-width: 999px) {
+  #block-block-9 {
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

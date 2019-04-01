@@ -745,7 +745,7 @@ function safer_internet_blocks_views_default_views() {
   /* Display: Rapporter pr. organisation */
   $handler = $view->new_display('block', 'Rapporter pr. organisation', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Senete rapport';
+  $handler->display->display_options['title'] = 'Seneste rapport';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'si-latest-report';
   $handler->display->display_options['display_description'] = 'Kontekstafhængig visning af rapport';
@@ -881,7 +881,7 @@ function safer_internet_blocks_views_default_views() {
     t('Materialer til skoler'),
     t('Materialer til skoler (forside)'),
     t('Rapporter pr. organisation'),
-    t('Senete rapport'),
+    t('Seneste rapport'),
     t('Kontekstafhængig visning af rapport'),
     t('Alle'),
     t('Seneste rapport pr. organisation'),

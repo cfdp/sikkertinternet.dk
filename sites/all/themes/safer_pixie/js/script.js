@@ -15,11 +15,22 @@
   'use strict';
 
   // To understand behaviors, see https://drupal.org/node/756722#behaviors
-  Drupal.behaviors.my_custom_behavior = {
+  Drupal.behaviors.adjust_sidebar_height = {
     attach: function (context, settings) {
+      function resizeSidebar() {
+        var contentHeight = $('.layout-3col__left-content').outerHeight();
+        var sidebar = $('.layout-3col__right-sidebar');
 
-      // Place your code here.
-
+        $(window).resize(function () {
+          // don't resize sidebar on one-column layout (breakpoint xl)
+          if ($(window).width() < 999) {
+            sidebar.css('height', 'inherit');
+            return;
+          }
+          sidebar.css('height', contentHeight);
+        });
+      }
+      resizeSidebar();
     }
   };
 
