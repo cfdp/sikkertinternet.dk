@@ -67,6 +67,14 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  color: #00c3a6;
+}
+
+a.menu__link {
+  font-weight: 600;
+}
+
 .si-link {
   margin: 0.45rem 0;
 }
@@ -374,6 +382,10 @@ ol ul,
 ul ol,
 ul ul {
   margin: 0;
+}
+
+.node-page ul li {
+  margin-bottom: 1rem;
 }
 
 dd {
