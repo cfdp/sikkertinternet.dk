@@ -18,9 +18,16 @@
 a,
 %link {
   color: color(link);
+  &:visited {
+    color: color(link);
+  }
   // Remove gaps in links underline in iOS 8+ and Safari 8+.
   -webkit-text-decoration-skip: objects;
   text-decoration: none;
+}
+
+a.menu__link {
+  font-weight: 600;
 }
 
 .si-link {
