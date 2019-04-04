@@ -15,7 +15,7 @@ function safer_internet_blocks_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Formålstekst';
   $fe_block_boxes->format = '2';
   $fe_block_boxes->machine_name = 'intention_short';
-  $fe_block_boxes->body = '<div class="hero"><p class="hero__text">Sikker Internet Center Danmark er et samarbejde mellem <a title="Medierådet for Børn og Unge" href="/node/5">Medierådet for Børn og Unge</a>, <a title="Red Barnet" href="/node/4">Red Barnet</a> og <a title="CfDP" href="/node/6">Center for Digital Pædagogik</a>. Centerets formål er at styrke børn og unges brug af digitale og sociale medier, samt at bekæmpe ulovligt og uønsket indhold, der involverer børn og unge.</p><a class="hero__read-more" href="/node/12">Læs mere</a></div>';
+  $fe_block_boxes->body = '<div class="hero"><p class="hero__text">Sikker Internet Center Danmark er et samarbejde mellem <a title="Medierådet for Børn og Unge" href="https://www.medieraadet.dk/">Medierådet for Børn og Unge</a>, <a title="Red Barnet" href="https://redbarnet.dk/anmelddet">Red Barnet</a> og <a title="CfDP" href="https://cfdp.dk/">Center for Digital Pædagogik</a>. Centerets formål er at styrke børn og unges brug af digitale og sociale medier, samt at bekæmpe ulovligt og uønsket indhold, der involverer børn og unge.</p><a class="hero__read-more" href="/node/12">Læs mere</a></div>';
 
   $export['intention_short'] = $fe_block_boxes;
 

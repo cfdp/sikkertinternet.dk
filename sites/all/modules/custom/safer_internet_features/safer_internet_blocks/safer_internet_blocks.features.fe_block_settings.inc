@@ -436,7 +436,9 @@ function safer_internet_blocks_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 'Seneste_aktiviteter-block_1',
     'module' => 'views',
-    'node_types' => array(),
+    'node_types' => array(
+      0 => 'page',
+    ),
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -494,7 +496,7 @@ function safer_internet_blocks_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'safer_pixie',
-        'weight' => -18,
+        'weight' => -20,
       ),
       'zen' => array(
         'region' => 'sidebar_first',
@@ -608,7 +610,7 @@ function safer_internet_blocks_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'safer_pixie',
-        'weight' => -16,
+        'weight' => -19,
       ),
       'zen' => array(
         'region' => '',
