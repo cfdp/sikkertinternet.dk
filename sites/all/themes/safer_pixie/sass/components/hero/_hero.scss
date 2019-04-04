@@ -14,7 +14,7 @@
 
   &__text {
     @include respond-to(m) {
-      font-size: 26px;
+      font-size: 24px;
     }
     color: color(dusk-blue-two);
     font-size: 20px;
@@ -44,6 +44,9 @@
     line-height: 1.31;
     letter-spacing: 1.1px;
     padding: .8rem 0 1.2rem 0;
+    &:visited {
+      color: color(dusk-blue-two);
+    }
   }
 }
 

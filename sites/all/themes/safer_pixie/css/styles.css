@@ -71,10 +71,6 @@ a:visited {
   color: #00c3a6;
 }
 
-a.menu__link {
-  font-weight: 600;
-}
-
 .si-link {
   margin: 0.45rem 0;
 }
@@ -1088,7 +1084,7 @@ th {
 
 @media (min-width: 777px) {
   .hero__text {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 
@@ -1111,6 +1107,10 @@ th {
   line-height: 1.31;
   letter-spacing: 1.1px;
   padding: .8rem 0 1.2rem 0;
+}
+
+.hero__read-more:visited {
+  color: #1f4b8a;
 }
 
 .hidden,
@@ -1419,6 +1419,10 @@ span.field-label {
 .nav-menu__link.is-active, .nav-menu__link--is-active,
 .menu a.active {
   color: #000;
+}
+
+a.menu__link {
+  font-weight: 600;
 }
 
 .navbar,

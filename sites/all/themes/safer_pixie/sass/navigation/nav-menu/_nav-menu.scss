@@ -59,3 +59,7 @@
 .menu a.active {
   @extend %nav-menu__link--is-active;
 }
+
+a.menu__link {
+  font-weight: 600;
+}

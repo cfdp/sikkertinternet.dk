@@ -26,10 +26,6 @@ a,
   text-decoration: none;
 }
 
-a.menu__link {
-  font-weight: 600;
-}
-
 .si-link {
   @include margin(.3 0);
   a {
