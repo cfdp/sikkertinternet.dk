@@ -948,7 +948,7 @@ th {
   height: 30px;
   width: 104px;
   display: inline-block;
-  background-size: 104px 30px;
+  background-size: 104px 26px;
   background-image: url(../sass/components/images/logo_inhope.png);
 }
 
@@ -2226,7 +2226,7 @@ tr.drag-previous {
   width: 116px;
   height: 38px;
   background-size: 116px 38px;
-  background-image: url(../sass/components/images/logo_cfdp.svg);
+  background-image: url(../sass/components/images/logo_cfdp.png);
   margin-right: 50px;
 }
 
